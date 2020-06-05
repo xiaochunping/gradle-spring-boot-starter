@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'com.study'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url("http://192.168.1.102:8081/nexus/repository/maven-snapshots/")
+    }
+}
+
+dependencies {
+    compile(
+            "org.springframework.boot:spring-boot-starter-web:2.1.3.RELEASE",
+            "com.study:custom-spring-boot-starter:1.0-SNAPSHOT",
+            //"com.study:custom-spring-boot-starter:1.0-20200605.122826-1",
+            //project("custom-spring-boot-starter")
+    )
+    //compileOnly和provided效果是一样的，只在编译的时候有效，不参与打包
+    compileOnly(
+            "org.projectlombok:lombok:1.18.12",
+    )
+    implementation(
+            "com.study:custom-spring-boot-starter:1.0-20200605.122826-1",
+            //"com.study:custom-spring-boot-starter:1.0-SNAPSHOT"
+    )
+    annotationProcessor(
+            "org.projectlombok:lombok:1.18.12",
+    )
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

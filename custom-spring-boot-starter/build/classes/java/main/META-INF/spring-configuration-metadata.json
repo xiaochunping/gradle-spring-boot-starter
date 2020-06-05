@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "allen",
+      "type": "com.study.starter.hello.HelloProperties",
+      "sourceType": "com.study.starter.hello.HelloProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "allen.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.study.starter.hello.HelloProperties"
+    },
+    {
+      "name": "allen.hometown",
+      "type": "java.lang.String",
+      "sourceType": "com.study.starter.hello.HelloProperties"
+    },
+    {
+      "name": "allen.name",
+      "type": "java.lang.String",
+      "sourceType": "com.study.starter.hello.HelloProperties"
+    }
+  ],
+  "hints": []
+}

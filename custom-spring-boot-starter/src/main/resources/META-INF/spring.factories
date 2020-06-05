@@ -1,0 +1,4 @@
+# 自动初始化配置
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.study.starter.hello.HelloServiceAutoConfiguration,\
+  com.study.starter.log.MyLogAutoConfiguration
